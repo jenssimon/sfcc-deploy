@@ -1,0 +1,62 @@
+{
+  "name": "sfcc-deploy",
+  "version": "3.0.0-pre",
+  "description": "Deploy cartridges to a Salesforce Commerce Cloud (SFCC) instance",
+  "main": "index.js",
+  "author": "Jens Simon <https://github.com/jenssimon/>",
+  "license": "MIT",
+  "keywords": [
+    "sfcc",
+    "demandware",
+    "salesforce",
+    "commercecloud",
+    "sfra",
+    "deploy"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jenssimon/sfcc-deploy"
+  },
+  "scripts": {
+    "lint": "eslint --fix ./"
+  },
+  "dependencies": {
+    "archiver-promise": "^1.0.0",
+    "chalk": "^4.1.0",
+    "cli-step": "^1.0.2"
+  },
+  "peerDependencies": {
+    "dwdav": ">=3.5.1",
+    "sfcc-ci": ">=2.4.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@jenssimon/eslint-config-base": "^3.1.0",
+    "dwdav": "^3.5.1",
+    "eslint": "^7.20.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.1.3",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-optimize-regex": "^1.2.0",
+    "eslint-plugin-promise": "^4.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-react-redux": "^3.3.2",
+    "eslint-plugin-sonarjs": "^0.6.0",
+    "sfcc-ci": "^2.6.0",
+    "npm-run-all": "^4.1.5"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@jenssimon/base"
+    ],
+    "rules": {
+      "sonarjs/cognitive-complexity": "off"
+    }
+  }
+}
