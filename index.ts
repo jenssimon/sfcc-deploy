@@ -1,31 +1,86 @@
-const fs = require('fs');
-const DWDAV = require('dwdav');
-const Steps = require('cli-step');
-const chalk = require('chalk');
-const archiver = require('archiver-promise');
-const sfccCi = require('sfcc-ci');
+import fs from 'fs';
+import DWDAV from 'dwdav';
+import Steps, { Step } from 'cli-step';
+import chalk from 'chalk';
+import archiver from 'archiver';
+import sfccCi from 'sfcc-ci';
 
-module.exports = async (options) => {
+interface SFCCDeployCredential {
+  hostname: string;
+}
+
+interface SFCCCIDeployCredential extends SFCCDeployCredential {
+  clientId: string;
+  clientSecret: string;
+  p12: string;
+  passphrase: string;
+}
+
+interface DWDAVDeployCredential extends SFCCCIDeployCredential {
+  username: string;
+  password: string;
+}
+
+export type SFCCDeployCredentials = SFCCCIDeployCredential | DWDAVDeployCredential;
+
+export interface SFCCDeployStepTextOptions {
+  options: SFCCDeployOptions,
+  dwdav?: DWDAV,
+  rootDir: string,
+  step: Step,
+  stepText: string;
+}
+
+export type SFCCDeployStepText = string | ((opts: SFCCDeployStepTextOptions) => string);
+
+export interface SFCCDeployAdditionalStep {
+  condition: string;
+  name: SFCCDeployStepText;
+  emoji: string;
+  fn: (opts: SFCCDeployAdditionalStepOptions) => Promise<void>;
+  specialFinish?: boolean;
+}
+
+export interface SFCCDeployAdditionalStepOptions {
+  options: SFCCDeployOptions;
+  dwdav?: DWDAV;
+  token: string;
+  useSfccCi: boolean;
+  rootDir: string;
+  step: Step;
+  stepText: string;
+
+}
+
+export interface SFCCDeployOptions {
+  [key: string]: undefined | boolean | string | SFCCDeployCredentials | SFCCDeployAdditionalStep[];
+  credentials: SFCCDeployCredentials;
+  version: string;
+  root?: string;
+  additionalSteps?: SFCCDeployAdditionalStep[];
+}
+
+export default async (options: SFCCDeployOptions): Promise<void> => {
   const {
     credentials: config,
     version,
     root,
     additionalSteps,
   } = options;
-  const useSfccCi = config.clientId && config.clientSecret;
-  const rootDir = root || './dist/';
+  const useSfccCi = !!(config.clientId && config.clientSecret);
+  const rootDir = root ?? './dist/';
   const dwdav = !useSfccCi ? new DWDAV({
     ...config,
     folder: 'Cartridges',
     version,
   }) : undefined;
-  let token;
+  let token: string;
 
-  let stepText;
-  let step;
-  let steps;
+  let stepText: string;
+  let step: Step;
+  let steps: Steps;
 
-  const finishStep = (success) => {
+  const finishStep = (success: boolean) => {
     if (success) {
       step.success(`${stepText} - ${chalk.bold.green('OK')}`);
     } else {
@@ -34,7 +89,8 @@ module.exports = async (options) => {
     return true;
   };
 
-  const defineStep = (prmStepText, emoji, fn, specialFinish) => async () => {
+  const defineStep = (prmStepText: SFCCDeployStepText, emoji: string, fn: () => Promise<unknown>,
+    specialFinish?: boolean) => async () => {
     stepText = typeof prmStepText !== 'function' ? prmStepText : prmStepText({
       options, dwdav, rootDir, step, stepText,
     });
@@ -66,9 +122,11 @@ module.exports = async (options) => {
   const zipFile = rootDir + zipFileName;
 
   const zipCartridges = defineStep('Creating ZIP', 'hammer', async () => {
-    const archive = archiver(zipFile, {
+    const output = fs.createWriteStream(zipFile);
+    const archive = archiver('zip', {
       zlib: { level: 9 },
     });
+    archive.pipe(output);
     archive.directory(`${rootDir}cartridges/`, !useSfccCi ? false : version);
     await archive.finalize();
 
@@ -81,20 +139,20 @@ module.exports = async (options) => {
   }, true);
 
   const checkConnection = defineStep('Check connection', 'earth_africa', async () => {
-    await dwdav.get('..');
+    await (dwdav as DWDAV).get('..');
   });
 
   const checkCodeVersionExistance = defineStep('Check for existing code version', 'mag', async () => {
     let codeVersionExists;
     try {
-      await dwdav.get('.');
+      await (dwdav as DWDAV).get('.');
       codeVersionExists = true;
     } catch (e) {
       codeVersionExists = false;
     }
 
     if (codeVersionExists) {
-      await dwdav.delete('.');
+      await (dwdav as DWDAV).delete('.');
       step.success(`${stepText} - ${chalk.bold.green('Deleted existing version')}`);
     } else {
       step.success(`${stepText} - ${chalk.bold.green('Not found')}`);
@@ -102,15 +160,15 @@ module.exports = async (options) => {
   }, true);
 
   const uploadZip = defineStep('Uploading ZIP', 'truck', async () => {
-    await dwdav.post(`${rootDir}cartridges.zip`, rootDir);
+    await (dwdav as DWDAV).post(`${rootDir}cartridges.zip`, rootDir);
   });
 
   const unzip = defineStep('Unzipping', 'gift', async () => {
-    await dwdav.unzip(zipFileName);
+    await (dwdav as DWDAV).unzip(zipFileName);
   });
 
   const deleteZip = defineStep('Delete remote ZIP', 'wastebasket', async () => {
-    await dwdav.delete(zipFileName);
+    await (dwdav as DWDAV).delete(zipFileName);
   });
 
   const sfccCiDeploy = defineStep('Deploy code', 'truck', async () => {
@@ -129,7 +187,7 @@ module.exports = async (options) => {
         passphrase: config.passphrase ? config.passphrase : undefined,
       }, (err) => {
         if (!err) {
-          resolve();
+          resolve(undefined);
         } else {
           reject(err);
         }

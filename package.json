@@ -2,7 +2,8 @@
   "name": "sfcc-deploy",
   "version": "3.0.1",
   "description": "Deploy cartridges to a Salesforce Commerce Cloud (SFCC) instance",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "author": "Jens Simon <https://github.com/jenssimon/>",
   "license": "MIT",
   "keywords": [
@@ -13,16 +14,24 @@
     "sfra",
     "deploy"
   ],
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md",
+    "deploy.gif"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/jenssimon/sfcc-deploy"
   },
   "scripts": {
-    "lint": "eslint --fix ./"
+    "lint": "eslint --fix ./",
+    "tsc": "tsc",
+    "prepublishOnly": "tsc"
   },
   "dependencies": {
-    "archiver-promise": "^1.0.0",
-    "chalk": "^4.1.1",
+    "archiver": "^5.3.0",
+    "chalk": "^4.1.2",
     "cli-step": "^1.0.2"
   },
   "peerDependencies": {
@@ -31,14 +40,22 @@
   },
   "devDependencies": {
     "@jenssimon/eslint-config-base": "^4.0.0",
+    "@jenssimon/eslint-config-typescript": "^3.0.0",
+    "@types/archiver": "^5.1.1",
     "dwdav": "^3.5.1",
-    "eslint": "^7.28.0",
+    "eslint": "^7.32.0",
     "npm-run-all": "^4.1.5",
-    "sfcc-ci": "^2.7.1"
+    "sfcc-ci": "^2.7.2",
+    "typescript": "^4.3.5"
   },
   "eslintConfig": {
+    "parserOptions": {
+      "project": "tsconfig.json",
+      "tsconfigRootDir": "."
+    },
     "extends": [
-      "@jenssimon/base"
+      "@jenssimon/base",
+      "@jenssimon/typescript"
     ],
     "rules": {
       "sonarjs/cognitive-complexity": "off"
