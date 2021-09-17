@@ -211,6 +211,6 @@ export default async (options: SFCCDeployOptions): Promise<void> => {
     });
   } catch (e) {
     finishStep(false);
-    throw(e);
+    throw (e);
   }
 };
