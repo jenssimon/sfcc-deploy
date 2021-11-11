@@ -89,8 +89,12 @@ export default async (options: SFCCDeployOptions): Promise<void> => {
     return true;
   };
 
-  const defineStep = (prmStepText: SFCCDeployStepText, emoji: string, fn: () => Promise<unknown>,
-    specialFinish?: boolean) => async () => {
+  const defineStep = (
+    prmStepText: SFCCDeployStepText,
+    emoji: string,
+    fn: () => Promise<unknown>,
+    specialFinish?: boolean,
+  ) => async () => {
     stepText = typeof prmStepText !== 'function' ? prmStepText : prmStepText({
       options, dwdav, rootDir, step, stepText,
     });
