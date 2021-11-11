@@ -1,4 +1,4 @@
-[![NPM version][npm-image]][npm-url] [![Downloads][npm-downloads-image]][npm-url] [![Dependencies][deps-image]][deps-url] [![star this repo][gh-stars-image]][gh-url] [![fork this repo][gh-forks-image]][gh-url] [![Build Status][travis-image]][travis-url] ![Code Style][codestyle-image]
+[![NPM version][npm-image]][npm-url] [![Downloads][npm-downloads-image]][npm-url][![star this repo][gh-stars-image]][gh-url] [![fork this repo][gh-forks-image]][gh-url] [![Build Status][travis-image]][travis-url] ![Code Style][codestyle-image]
 
 # sfcc-deploy
 
@@ -82,9 +82,6 @@ MIT © 2021 [Jens Simon](https://github.com/jenssimon)
 [npm-url]: https://www.npmjs.com/package/sfcc-deploy
 [npm-image]: https://badgen.net/npm/v/sfcc-deploy
 [npm-downloads-image]: https://badgen.net/npm/dw/sfcc-deploy
-
-[deps-url]: https://david-dm.org/jenssimon/sfcc-deploy
-[deps-image]: https://badgen.net/david/dep/jenssimon/sfcc-deploy
 
 [gh-url]: https://github.com/jenssimon/sfcc-deploy
 [gh-stars-image]: https://badgen.net/github/stars/jenssimon/sfcc-deploy
