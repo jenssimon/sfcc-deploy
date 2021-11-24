@@ -21,7 +21,7 @@ Uploads a set of SFCC cartridges to an instance. Additionally you can extend it 
 The credentials object is the same as the config for [dwdav](https://www.npmjs.com/package/dwdav#config).
 
 ```javascript
-const sfccDeploy = require('sfcc-deploy');
+import sfccDeploy from 'sfcc-deploy';
 
 const config = {
   hostname: 'host.name.net',
