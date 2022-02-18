@@ -320,7 +320,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jenssimon/eslint-config-base@npm:^5.3.0":
+"@jenssimon/eslint-config-base@npm:5.3.0":
   version: 5.3.0
   resolution: "@jenssimon/eslint-config-base@npm:5.3.0"
   dependencies:
@@ -346,7 +346,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jenssimon/eslint-config-typescript@npm:^3.3.3":
+"@jenssimon/eslint-config-typescript@npm:3.3.3":
   version: 3.3.3
   resolution: "@jenssimon/eslint-config-typescript@npm:3.3.3"
   dependencies:
@@ -411,7 +411,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/archiver@npm:^5.3.1":
+"@types/archiver@npm:5.3.1":
   version: 5.3.1
   resolution: "@types/archiver@npm:5.3.1"
   dependencies:
@@ -1398,7 +1398,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dwdav@npm:^3.5.1":
+"dwdav@npm:3.5.1":
   version: 3.5.1
   resolution: "dwdav@npm:3.5.1"
   dependencies:
@@ -1844,7 +1844,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^8.9.0":
+"eslint@npm:8.9.0":
   version: 8.9.0
   resolution: "eslint@npm:8.9.0"
   dependencies:
@@ -3204,7 +3204,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"npm-run-all@npm:^4.1.5":
+"npm-run-all@npm:4.1.5":
   version: 4.1.5
   resolution: "npm-run-all@npm:4.1.5"
   dependencies:
@@ -3873,7 +3873,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sfcc-ci@npm:^2.9.1":
+"sfcc-ci@npm:2.9.1":
   version: 2.9.1
   resolution: "sfcc-ci@npm:2.9.1"
   dependencies:
@@ -3905,17 +3905,17 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "sfcc-deploy@workspace:."
   dependencies:
-    "@jenssimon/eslint-config-base": ^5.3.0
-    "@jenssimon/eslint-config-typescript": ^3.3.3
-    "@types/archiver": ^5.3.1
+    "@jenssimon/eslint-config-base": 5.3.0
+    "@jenssimon/eslint-config-typescript": 3.3.3
+    "@types/archiver": 5.3.1
     archiver: ^5.3.0
     chalk: ^4.1.2
     cli-step: ^1.0.2
-    dwdav: ^3.5.1
-    eslint: ^8.9.0
-    npm-run-all: ^4.1.5
-    sfcc-ci: ^2.9.1
-    typescript: ^4.5.5
+    dwdav: 3.5.1
+    eslint: 8.9.0
+    npm-run-all: 4.1.5
+    sfcc-ci: 2.9.1
+    typescript: 4.5.5
   peerDependencies:
     dwdav: ">=3.5.1"
     sfcc-ci: ">=2.4.0"
@@ -4368,7 +4368,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^4.5.5":
+"typescript@npm:4.5.5":
   version: 4.5.5
   resolution: "typescript@npm:4.5.5"
   bin:
@@ -4378,7 +4378,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.5.5#~builtin<compat/typescript>":
+"typescript@patch:typescript@4.5.5#~builtin<compat/typescript>":
   version: 4.5.5
   resolution: "typescript@patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=493e53"
   bin:
