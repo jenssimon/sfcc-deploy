@@ -61,5 +61,5 @@
       "sonarjs/cognitive-complexity": "off"
     }
   },
-  "packageManager": "yarn@3.1.1"
+  "packageManager": "yarn@3.2.0"
 }
