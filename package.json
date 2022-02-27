@@ -39,7 +39,7 @@
     "sfcc-ci": ">=2.4.0"
   },
   "devDependencies": {
-    "@jenssimon/eslint-config-base": "5.3.0",
+    "@jenssimon/eslint-config-base": "5.3.1",
     "@jenssimon/eslint-config-typescript": "3.3.3",
     "@types/archiver": "5.3.1",
     "dwdav": "3.5.1",
