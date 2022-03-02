@@ -3305,7 +3305,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"npm-run-all@npm:4.1.5":
+"npm-run-all@npm:^4.1.5":
   version: 4.1.5
   resolution: "npm-run-all@npm:4.1.5"
   dependencies:
@@ -4025,7 +4025,7 @@ __metadata:
     cli-step: ^1.0.2
     dwdav: 3.5.1
     eslint: 8.10.0
-    npm-run-all: 4.1.5
+    npm-run-all: ^4.1.5
     sfcc-ci: 2.9.1
     typescript: 4.6.2
   peerDependencies:
