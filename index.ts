@@ -1,6 +1,7 @@
 import fs from 'fs';
 import DWDAV from 'dwdav';
-import Steps, { Step } from 'cli-step';
+import type { Step } from 'cli-step';
+import Steps from 'cli-step';
 import chalk from 'chalk';
 import archiver from 'archiver';
 import sfccCi from 'sfcc-ci';
