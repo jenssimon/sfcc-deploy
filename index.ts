@@ -25,10 +25,10 @@ interface DWDAVDeployCredential extends SFCCCIDeployCredential {
 export type SFCCDeployCredentials = SFCCCIDeployCredential | DWDAVDeployCredential;
 
 export interface SFCCDeployStepTextOptions {
-  options: SFCCDeployOptions,
-  dwdav?: DWDAV,
-  rootDir: string,
-  step: Step,
+  options: SFCCDeployOptions;
+  dwdav?: DWDAV;
+  rootDir: string;
+  step: Step;
   stepText: string;
 }
 
