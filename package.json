@@ -46,7 +46,7 @@
     "@jenssimon/eslint-config-typescript": "3.4.1",
     "@types/archiver": "5.3.1",
     "dwdav": "3.5.1",
-    "eslint": "8.14.0",
+    "eslint": "8.15.0",
     "npm-run-all": "4.1.5",
     "sfcc-ci": "2.9.1",
     "typescript": "4.6.4"
