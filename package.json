@@ -28,9 +28,9 @@
     "lint": "eslint --fix --ext .tsx,.ts,.jsx,.js ./",
     "tsc": "tsc",
     "prepublishOnly": "tsc",
-    "ci": "run-s \"ci:*\"",
-    "ci:lint": "eslint --ext .tsx,.ts,.jsx,.js ./",
-    "ci:tsc": "tsc --noEmit"
+    "ci-test": "run-s \"ci-test:*\"",
+    "ci-test:lint": "eslint --ext .tsx,.ts,.jsx,.js ./",
+    "ci-test:tsc": "tsc --noEmit"
   },
   "dependencies": {
     "archiver": "^5.3.0",
