@@ -47,7 +47,7 @@
     "@jenssimon/eslint-config-base": "5.4.1",
     "@jenssimon/eslint-config-typescript": "3.4.2",
     "@types/archiver": "5.3.1",
-    "commitizen": "^4.2.4",
+    "commitizen": "4.2.4",
     "cz-conventional-changelog": "3.3.0",
     "dwdav": "3.5.1",
     "eslint": "8.15.0",
