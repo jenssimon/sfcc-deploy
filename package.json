@@ -1,6 +1,6 @@
 {
   "name": "sfcc-deploy",
-  "version": "3.1.0",
+  "version": "0.0.0-development",
   "description": "Deploy cartridges to a Salesforce Commerce Cloud (SFCC) instance",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -30,7 +30,12 @@
     "prepublishOnly": "tsc",
     "ci-test": "run-s \"ci-test:*\"",
     "ci-test:lint": "eslint --ext .tsx,.ts,.jsx,.js ./",
-    "ci-test:tsc": "tsc --noEmit"
+    "ci-test:tsc": "tsc --noEmit",
+    "commit": "cz",
+    "postinstall": "husky install",
+    "prepack": "pinst --disable",
+    "postpack": "pinst --enable",
+    "semantic-release": "semantic-release"
   },
   "dependencies": {
     "archiver": "^5.3.0",
@@ -42,8 +47,8 @@
     "sfcc-ci": ">=2.4.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.0.0",
-    "@commitlint/config-conventional": "^17.0.0",
+    "@commitlint/cli": "17.0.0",
+    "@commitlint/config-conventional": "17.0.0",
     "@jenssimon/eslint-config-base": "5.4.1",
     "@jenssimon/eslint-config-typescript": "3.4.2",
     "@types/archiver": "5.3.1",
@@ -51,9 +56,10 @@
     "cz-conventional-changelog": "3.3.0",
     "dwdav": "3.5.1",
     "eslint": "8.15.0",
-    "husky": "^8.0.1",
+    "husky": "8.0.1",
     "npm-run-all": "4.1.5",
-    "pinst": "^3.0.0",
+    "pinst": "3.0.0",
+    "semantic-release": "19.0.2",
     "sfcc-ci": "2.9.1",
     "typescript": "4.6.4"
   },
