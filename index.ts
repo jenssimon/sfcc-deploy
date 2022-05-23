@@ -3,7 +3,7 @@ import fs from 'fs';
 import DWDAV from 'dwdav';
 
 import Steps from 'cli-step';
-import chalk from 'chalk'; // eslint-disable-line import/no-unresolved
+import chalk from 'chalk';
 import archiver from 'archiver';
 import sfccCi from 'sfcc-ci';
 
