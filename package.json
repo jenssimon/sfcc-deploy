@@ -38,7 +38,7 @@
     "semantic-release": "semantic-release"
   },
   "dependencies": {
-    "archiver": "^5.3.0",
+    "archiver": "^5.3.1",
     "chalk": "^4.1.2",
     "cli-step": "^1.0.2"
   },
@@ -49,7 +49,7 @@
   "devDependencies": {
     "@commitlint/cli": "17.0.3",
     "@commitlint/config-conventional": "17.0.3",
-    "@jenssimon/eslint-config-base": "5.5.2",
+    "@jenssimon/eslint-config-base": "6.0.0",
     "@jenssimon/eslint-config-typescript": "3.5.1",
     "@types/archiver": "5.3.1",
     "commitizen": "4.2.5",

@@ -155,7 +155,7 @@ export default async (options: SFCCDeployOptions): Promise<void> => {
     try {
       await (dwdav as DWDAV).get('.');
       codeVersionExists = true;
-    } catch (e) {
+    } catch {
       codeVersionExists = false;
     }
 
@@ -192,7 +192,7 @@ export default async (options: SFCCDeployOptions): Promise<void> => {
     await new Promise((resolve, reject) => {
       sfccCi.code.deploy(config.hostname, zipFile, token, {
         pfx: config.p12 || undefined,
-        passphrase: config.passphrase ? config.passphrase : undefined,
+        passphrase: config.passphrase ?? undefined,
       }, (err) => {
         if (!err) {
           resolve(undefined);
