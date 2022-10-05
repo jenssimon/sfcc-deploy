@@ -49,7 +49,7 @@
   "devDependencies": {
     "@commitlint/cli": "17.1.2",
     "@commitlint/config-conventional": "17.1.0",
-    "@jenssimon/eslint-config-base": "6.3.6",
+    "@jenssimon/eslint-config-base": "6.3.7",
     "@jenssimon/eslint-config-typescript": "3.6.5",
     "@types/archiver": "5.3.1",
     "@types/node": "18.7.23",
@@ -79,7 +79,7 @@
       "sonarjs/cognitive-complexity": "off"
     }
   },
-  "packageManager": "yarn@3.2.3",
+  "packageManager": "yarn@3.2.4",
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
