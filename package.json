@@ -79,7 +79,7 @@
       "sonarjs/cognitive-complexity": "off"
     }
   },
-  "packageManager": "yarn@3.2.4",
+  "packageManager": "yarn@3.3.0",
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
