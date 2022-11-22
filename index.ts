@@ -73,11 +73,11 @@ export default async (options: SFCCDeployOptions): Promise<void> => {
   } = options;
   const useSfccCi = !!(config.clientId && config.clientSecret);
   const rootDir = root ?? './dist/';
-  const dwdav = !useSfccCi ? new DWDAV({
+  const dwdav = useSfccCi ? undefined : new DWDAV({
     ...config,
     folder: 'Cartridges',
     version,
-  }) : undefined;
+  });
   let token: string;
 
   let stepText: string;
@@ -99,9 +99,9 @@ export default async (options: SFCCDeployOptions): Promise<void> => {
     fn: () => Promise<unknown>,
     specialFinish?: boolean,
   ) => async () => {
-    stepText = typeof prmStepText !== 'function' ? prmStepText : prmStepText({
+    stepText = typeof prmStepText === 'function' ? prmStepText({
       options, dwdav, rootDir, step, stepText,
-    });
+    }) : prmStepText;
     step = steps
       .advance(stepText, emoji)
       .start();
@@ -135,7 +135,7 @@ export default async (options: SFCCDeployOptions): Promise<void> => {
       zlib: { level: 9 },
     });
     archive.pipe(output);
-    archive.directory(`${rootDir}cartridges/`, !useSfccCi ? false : version);
+    archive.directory(`${rootDir}cartridges/`, useSfccCi ? version : false);
     await archive.finalize();
 
     const stats = fs.statSync(zipFile);
@@ -182,10 +182,10 @@ export default async (options: SFCCDeployOptions): Promise<void> => {
   const sfccCiDeploy = defineStep('Deploy code', 'truck', async () => {
     token = await new Promise((resolve, reject) => {
       sfccCi.auth.auth(config.clientId, config.clientSecret, (err, receivedToken) => {
-        if (!err) {
-          resolve(receivedToken);
-        } else {
+        if (err) {
           reject(err);
+        } else {
+          resolve(receivedToken);
         }
       });
     });
@@ -194,10 +194,10 @@ export default async (options: SFCCDeployOptions): Promise<void> => {
         pfx: config.p12 || undefined,
         passphrase: config.passphrase ?? undefined,
       }, (err) => {
-        if (!err) {
-          resolve(undefined);
-        } else {
+        if (err) {
           reject(err);
+        } else {
+          resolve(undefined);
         }
       });
     });
@@ -205,14 +205,14 @@ export default async (options: SFCCDeployOptions): Promise<void> => {
 
   try {
     await zipCartridges();
-    if (!useSfccCi) {
+    if (useSfccCi) {
+      await sfccCiDeploy();
+    } else {
       await checkConnection();
       await checkCodeVersionExistance();
       await uploadZip();
       await unzip();
       await deleteZip();
-    } else {
-      await sfccCiDeploy();
     }
     additionalActiveSteps.forEach(async (additionalStep) => {
       await additionalStep();
