@@ -383,9 +383,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jenssimon/eslint-config-base@npm:6.6.5":
-  version: 6.6.5
-  resolution: "@jenssimon/eslint-config-base@npm:6.6.5"
+"@jenssimon/eslint-config-base@npm:6.6.6":
+  version: 6.6.6
+  resolution: "@jenssimon/eslint-config-base@npm:6.6.6"
   dependencies:
     eslint-config-airbnb: 19.0.4
     eslint-config-airbnb-base: 15.0.0
@@ -395,7 +395,7 @@ __metadata:
     eslint-plugin-import: 2.26.0
     eslint-plugin-jest: 27.2.1
     eslint-plugin-jsx-a11y: 6.7.0
-    eslint-plugin-lit: 1.7.2
+    eslint-plugin-lit: 1.8.0
     eslint-plugin-optimize-regex: 1.2.1
     eslint-plugin-promise: 6.1.1
     eslint-plugin-react: 7.32.0
@@ -406,7 +406,7 @@ __metadata:
     eslint-plugin-wc: 1.4.0
   peerDependencies:
     eslint: ^7.32.0 || ^8.2.0
-  checksum: 2af8c7db50209fc43b3ff48219763dc5900999f58f4f6ece840f3a28f2d723d97d5f821d6368224cb4135e7b4b8abf42a734e5ebea2f51757c4e13bd25a567b0
+  checksum: 7a1fb37074c04fb803739c3df2c4bf900f00086910eb193aa2269afabe372392c331570830dba7db45591a530908d40469d3f0ec864ea4fc8e1fdcf9f609de32
   languageName: node
   linkType: hard
 
@@ -3128,16 +3128,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-lit@npm:1.7.2":
-  version: 1.7.2
-  resolution: "eslint-plugin-lit@npm:1.7.2"
+"eslint-plugin-lit@npm:1.8.0":
+  version: 1.8.0
+  resolution: "eslint-plugin-lit@npm:1.8.0"
   dependencies:
     parse5: ^6.0.1
     parse5-htmlparser2-tree-adapter: ^6.0.1
     requireindex: ^1.2.0
   peerDependencies:
     eslint: ">= 5"
-  checksum: 11eda4ad42cf1421b48a6b3cafdc237b974237c1698e148518b51d4f6bdcc0d9595604826d50e5f87844ee04564b102c33725434ef4569f6e2f8d4f7982e2250
+  checksum: c12e07e511db75afd500c153f03d0ced803647d1f87a3db87d3bcc9dcaf3096a3d17bfacaa5afd39abd3d70442d64e1a958ab9d6989d722a4b4d19b69ba01183
   languageName: node
   linkType: hard
 
@@ -7807,7 +7807,7 @@ __metadata:
   dependencies:
     "@commitlint/cli": 17.4.1
     "@commitlint/config-conventional": 17.4.0
-    "@jenssimon/eslint-config-base": 6.6.5
+    "@jenssimon/eslint-config-base": 6.6.6
     "@jenssimon/eslint-config-typescript": 3.6.19
     "@types/archiver": 5.3.1
     "@types/node": 18.11.18
