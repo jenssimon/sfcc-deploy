@@ -53,7 +53,7 @@
     "@jenssimon/eslint-config-typescript": "3.6.21",
     "@types/archiver": "5.3.1",
     "@types/node": "18.11.18",
-    "commitizen": "4.2.6",
+    "commitizen": "4.3.0",
     "cz-conventional-changelog": "3.3.0",
     "dwdav": "3.5.1",
     "eslint": "8.32.0",
