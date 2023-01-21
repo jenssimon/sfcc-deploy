@@ -77,7 +77,7 @@ Property   | Description
 
 ## License
 
-MIT © 2022 [Jens Simon](https://github.com/jenssimon)
+MIT © 2023 [Jens Simon](https://github.com/jenssimon)
 
 [npm-url]: https://www.npmjs.com/package/sfcc-deploy
 [npm-image]: https://badgen.net/npm/v/sfcc-deploy
