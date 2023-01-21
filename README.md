@@ -58,7 +58,7 @@ const activateCodeVersion = {
 };
 
 try {
-  sfccDeploy({
+  await sfccDeploy({
     credentials: config,
     version,
 
