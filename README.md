@@ -33,12 +33,16 @@ const config = {
 
 const version = '0.5.1';
 
-sfccDeploy({
-  credentials: config,
-  version,
+try {
+  await sfccDeploy({
+    credentials: config,
+    version,
 
-  root: './dist/', // default: './dist/'
-});
+    root: './dist/', // default: './dist/'
+  });
+} catch (e) {
+  console.error('error', e)
+}
 ```
 
 It's also possible to add additional tasks (executed after code upload).
@@ -53,15 +57,19 @@ const activateCodeVersion = {
   },
 };
 
-sfccDeploy({
-  credentials: config,
-  version,
+try {
+  sfccDeploy({
+    credentials: config,
+    version,
 
-  activateCodeVersion: true, // this flag is needed to activate the additional step
-  additionalSteps: [
-    activateCodeVersion,
-  ],
-});
+    activateCodeVersion: true, // this flag is needed to activate the additional step
+    additionalSteps: [
+      activateCodeVersion,
+    ],
+  });
+} catch (e)  {
+  console.error('error', e);
+}
 ```
 
 The emoji name must one of the available emojis from this [list](https://raw.githubusercontent.com/omnidan/node-emoji/master/lib/emoji.json).
