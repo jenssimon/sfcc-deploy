@@ -4,6 +4,7 @@
   "description": "Deploy cartridges to a Salesforce Commerce Cloud (SFCC) instance",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "bin": "dist/bin/sfcc-deploy.js",
   "author": "Jens Simon <https://github.com/jenssimon/>",
   "license": "MIT",
   "keywords": [
@@ -39,8 +40,10 @@
   },
   "dependencies": {
     "archiver": "^5.3.1",
+    "camel-case": "^4.1.2",
     "chalk": "^4.1.2",
-    "cli-step": "^1.0.2"
+    "cli-step": "^1.0.2",
+    "commander": "^10.0.0"
   },
   "peerDependencies": {
     "dwdav": ">=3.5.1",
