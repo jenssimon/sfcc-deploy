@@ -13,14 +13,14 @@ interface SFCCDeployCredential {
   hostname: string;
 }
 
-interface SFCCCIDeployCredential extends SFCCDeployCredential {
+export interface SFCCCIDeployCredential extends SFCCDeployCredential {
   clientId: string;
   clientSecret: string;
   p12: string;
   passphrase: string;
 }
 
-interface DWDAVDeployCredential extends SFCCCIDeployCredential {
+export interface DWDAVDeployCredential extends SFCCCIDeployCredential {
   username: string;
   password: string;
 }

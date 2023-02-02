@@ -43,10 +43,10 @@
     "camel-case": "^4.1.2",
     "chalk": "^4.1.2",
     "cli-step": "^1.0.2",
-    "commander": "^10.0.0"
+    "commander": "^10.0.0",
+    "dwdav": ">=3.5.1"
   },
   "peerDependencies": {
-    "dwdav": ">=3.5.1",
     "sfcc-ci": ">=2.4.0"
   },
   "devDependencies": {
@@ -58,7 +58,6 @@
     "@types/node": "18.11.18",
     "commitizen": "4.3.0",
     "cz-conventional-changelog": "3.3.0",
-    "dwdav": "3.5.1",
     "eslint": "8.33.0",
     "husky": "8.0.3",
     "lint-staged": "13.1.0",
