@@ -50,8 +50,8 @@
     "sfcc-ci": ">=2.4.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "17.4.2",
-    "@commitlint/config-conventional": "17.4.2",
+    "@commitlint/cli": "17.4.3",
+    "@commitlint/config-conventional": "17.4.3",
     "@jenssimon/eslint-config-base": "6.6.11",
     "@jenssimon/eslint-config-typescript": "3.6.24",
     "@types/archiver": "5.3.1",
