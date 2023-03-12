@@ -979,22 +979,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/archiver@npm:5.3.1":
-  version: 5.3.1
-  resolution: "@types/archiver@npm:5.3.1"
+"@types/archiver@npm:5.3.2":
+  version: 5.3.2
+  resolution: "@types/archiver@npm:5.3.2"
   dependencies:
-    "@types/glob": "*"
-  checksum: 1c6babc7f50acf5bf7fa3d5fa76bb68702e4463e6a412d259cdddff611dbbb9832ea4b2f41d675fd95ac1aa8b087daa882423073e41db9e296f14d41f2ea88e6
-  languageName: node
-  linkType: hard
-
-"@types/glob@npm:*":
-  version: 8.0.1
-  resolution: "@types/glob@npm:8.0.1"
-  dependencies:
-    "@types/minimatch": ^5.1.2
-    "@types/node": "*"
-  checksum: 98f3d0403c09638348a2f3b30aac2a3d6bdc306bce3ceb868f4794fef4f02727ccdf0dab0c7b7d65fd38a1afa1e48f02de56d29d2babe94ee9b204ca54acb31f
+    "@types/readdir-glob": "*"
+  checksum: 9db5b4fdc1740fa07d08340ed827598cc6eda97406ac18a06a158670c7124d4120650a3b9cd660e9e39b42f033cf8f052566da32681e8ad91163473df88a3c4c
   languageName: node
   linkType: hard
 
@@ -1022,7 +1012,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/minimatch@npm:*, @types/minimatch@npm:^5.1.2":
+"@types/minimatch@npm:*":
   version: 5.1.2
   resolution: "@types/minimatch@npm:5.1.2"
   checksum: 0391a282860c7cb6fe262c12b99564732401bdaa5e395bee9ca323c312c1a0f45efbf34dce974682036e857db59a5c9b1da522f3d6055aeead7097264c8705a8
@@ -1054,6 +1044,15 @@ __metadata:
   version: 2.4.1
   resolution: "@types/normalize-package-data@npm:2.4.1"
   checksum: e87bccbf11f95035c89a132b52b79ce69a1e3652fe55962363063c9c0dae0fe2477ebc585e03a9652adc6f381d24ba5589cc5e51849df4ced3d3e004a7d40ed5
+  languageName: node
+  linkType: hard
+
+"@types/readdir-glob@npm:*":
+  version: 1.1.0
+  resolution: "@types/readdir-glob@npm:1.1.0"
+  dependencies:
+    "@types/node": "*"
+  checksum: 98cabfac6beddd3aeb3624e05d57b8dd1354431e436e9e795aaf74ddf2f1c23342d7b8df7586cc3d1374ceeee0d7975638fae97cb1739572d8a4067ebebb91d9
   languageName: node
   linkType: hard
 
@@ -7878,7 +7877,7 @@ __metadata:
     "@commitlint/config-conventional": 17.4.4
     "@jenssimon/eslint-config-base": 6.6.12
     "@jenssimon/eslint-config-typescript": 3.6.28
-    "@types/archiver": 5.3.1
+    "@types/archiver": 5.3.2
     "@types/node": 18.15.0
     archiver: ^5.3.1
     camel-case: ^4.1.2
