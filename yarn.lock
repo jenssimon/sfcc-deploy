@@ -1043,10 +1043,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:18.15.11":
-  version: 18.15.11
-  resolution: "@types/node@npm:18.15.11"
-  checksum: 977b4ad04708897ff0eb049ecf82246d210939c82461922d20f7d2dcfd81bbc661582ba3af28869210f7e8b1934529dcd46bff7d448551400f9d48b9d3bddec3
+"@types/node@npm:18.15.12":
+  version: 18.15.12
+  resolution: "@types/node@npm:18.15.12"
+  checksum: dff7596db8d0a18bcd8da542dc62ed4377cba39546ff53baaa06d106f1482bc3e4e5e03644f5d1e3cef0904ffbe8ebbc244b2b0851f8025ab2a3959ee0ace58f
   languageName: node
   linkType: hard
 
@@ -8054,7 +8054,7 @@ __metadata:
     "@jenssimon/eslint-config-base": 6.6.14
     "@jenssimon/eslint-config-typescript": 3.6.36
     "@types/archiver": 5.3.2
-    "@types/node": 18.15.11
+    "@types/node": 18.15.12
     archiver: ^5.3.1
     camel-case: ^4.1.2
     chalk: ^4.1.2
