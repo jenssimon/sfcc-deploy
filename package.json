@@ -55,7 +55,7 @@
     "@jenssimon/eslint-config-base": "6.6.15",
     "@jenssimon/eslint-config-typescript": "3.6.38",
     "@types/archiver": "5.3.2",
-    "@types/node": "18.16.3",
+    "@types/node": "18.16.4",
     "commitizen": "4.3.0",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "8.39.0",
