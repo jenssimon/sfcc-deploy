@@ -884,6 +884,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@semantic-release/error@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "@semantic-release/error@npm:4.0.0"
+  checksum: 01213195ae3b8e2490b0d0db79525f7abbb1cc795494b46b8022f81ab1f24f5eab6232b549528b437cff872a66d36649f2fb4f3b56eba351d947a02cccc81ecc
+  languageName: node
+  linkType: hard
+
 "@semantic-release/github@npm:^9.0.0":
   version: 9.0.0
   resolution: "@semantic-release/github@npm:9.0.0"
@@ -1058,10 +1065,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:18.16.16":
-  version: 18.16.16
-  resolution: "@types/node@npm:18.16.16"
-  checksum: 0efad726dd1e0bef71c392c708fc5d78c5b39c46b0ac5186fee74de4ccb1b2e847b3fa468da67d62812f56569da721b15bf31bdc795e6c69b56c73a45079ed2d
+"@types/node@npm:18.16.17":
+  version: 18.16.17
+  resolution: "@types/node@npm:18.16.17"
+  checksum: 2f7e3a552d525ef4b7a2620ef5ef59b3fdfb1d8ab20627b537e090732b35c2bd103944933d347a319cc7d478b3866b0d1bc3d629ee5899ca663a4547ca078cee
   languageName: node
   linkType: hard
 
@@ -6008,12 +6015,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"marked@npm:^4.1.0":
-  version: 4.2.12
-  resolution: "marked@npm:4.2.12"
+"marked@npm:^5.0.0":
+  version: 5.1.0
+  resolution: "marked@npm:5.1.0"
   bin:
     marked: bin/marked.js
-  checksum: bd551cd61028ee639d4ca2ccdfcc5a6ba4227c1b143c4538f3cde27f569dcb57df8e6313560394645b418b84a7336c07ab1e438b89b6324c29d7d8cdd3102d63
+  checksum: ecb2b36a4758f725000400113f5107e89512b897251207e514c22605319bdddb6554fe3e68bd73b0d08f855582946e001adddfbfc7080a556a492950fb4b3a09
   languageName: node
   linkType: hard
 
@@ -7961,12 +7968,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semantic-release@npm:21.0.3":
-  version: 21.0.3
-  resolution: "semantic-release@npm:21.0.3"
+"semantic-release@npm:21.0.5":
+  version: 21.0.5
+  resolution: "semantic-release@npm:21.0.5"
   dependencies:
     "@semantic-release/commit-analyzer": ^10.0.0
-    "@semantic-release/error": ^3.0.0
+    "@semantic-release/error": ^4.0.0
     "@semantic-release/github": ^9.0.0
     "@semantic-release/npm": ^10.0.2
     "@semantic-release/release-notes-generator": ^11.0.0
@@ -7982,7 +7989,7 @@ __metadata:
     hook-std: ^3.0.0
     hosted-git-info: ^6.0.0
     lodash-es: ^4.17.21
-    marked: ^4.1.0
+    marked: ^5.0.0
     marked-terminal: ^5.1.1
     micromatch: ^4.0.2
     p-each-series: ^3.0.0
@@ -7995,7 +8002,7 @@ __metadata:
     yargs: ^17.5.1
   bin:
     semantic-release: bin/semantic-release.js
-  checksum: bbfed3497df4e4066374eca3c0162fbe4f38aa30a26fa402b5044b2d0b4dd17ec9656dd54236ba44835a6456b2d28bd196c8feca95b62cb0fcada2979526110c
+  checksum: 9b45d24392c24a7f147e4560d36a0f70447b719b0e7371c400834b9a1a98f4b6a3e23420480505f03b0b690c2eaaea2db53c870435a28f8946721ad96f63d3e1
   languageName: node
   linkType: hard
 
@@ -8099,7 +8106,7 @@ __metadata:
     "@jenssimon/eslint-config-base": 6.7.0
     "@jenssimon/eslint-config-typescript": 3.7.4
     "@types/archiver": 5.3.2
-    "@types/node": 18.16.16
+    "@types/node": 18.16.17
     archiver: ^5.3.1
     camel-case: ^4.1.2
     chalk: ^4.1.2
@@ -8113,7 +8120,7 @@ __metadata:
     lint-staged: 13.2.2
     npm-run-all: 4.1.5
     pinst: 3.0.0
-    semantic-release: 21.0.3
+    semantic-release: 21.0.5
     sfcc-ci: 2.11.0
     ts-node: 10.9.1
     typescript: 5.1.3
