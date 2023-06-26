@@ -26,7 +26,7 @@
     "url": "https://github.com/jenssimon/sfcc-deploy"
   },
   "scripts": {
-    "lint": "eslint --fix --ext .tsx,.ts,.jsx,.js ./",
+    "lint": "eslint --fix --ext .tsx,.ts,.mts,.cts,.jsx,.js,.mjs,.cjs ./",
     "tsc": "tsc",
     "prepublishOnly": "tsc",
     "ci-test": "run-s \"ci-test:*\"",

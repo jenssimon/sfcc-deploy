@@ -3,11 +3,11 @@ declare module 'sfcc-ci' {
   export declare const code: {
     deploy: (hostname: string, zipFile, token: string, options: unknown,
       callback: (err: Error, receivedToken: string) => void) => void;
-  };
+  }
 
   export declare const auth: {
     auth: (clientId: string, clientSecret: string, callback: (err: Error, receivedToken: string) => void) => void;
-  };
+  }
 }
 
 declare module 'dwdav' {
@@ -22,7 +22,7 @@ declare module 'dwdav' {
 
     unzip(url: string): Promise<string>;
   }
-  export default DWDAV;
+  export default DWDAV
 }
 
 declare module 'cli-step' {
@@ -39,5 +39,5 @@ declare module 'cli-step' {
 
     advance(stepText: string, emoji?: string): Step;
   }
-  export default Steps;
+  export default Steps
 }
