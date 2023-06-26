@@ -1,13 +1,13 @@
-import fs from 'node:fs';
+import fs from 'node:fs'
 
-import DWDAV from 'dwdav';
+import DWDAV from 'dwdav'
 
-import Steps from 'cli-step';
-import chalk from 'chalk';
-import archiver from 'archiver';
-import sfccCi from 'sfcc-ci';
+import Steps from 'cli-step'
+import chalk from 'chalk'
+import archiver from 'archiver'
+import sfccCi from 'sfcc-ci'
 
-import type { Step } from 'cli-step';
+import type { Step } from 'cli-step'
 
 interface SFCCDeployCredential {
   hostname: string;
@@ -70,28 +70,28 @@ export default async (options: SFCCDeployOptions): Promise<void> => {
     version,
     root,
     additionalSteps,
-  } = options;
-  const useSfccCi = !!(config.clientId && config.clientSecret);
-  const rootDir = root ?? './dist/';
+  } = options
+  const useSfccCi = !!(config.clientId && config.clientSecret)
+  const rootDir = root ?? './dist/'
   const dwdav = useSfccCi ? undefined : new DWDAV({
     ...config,
     folder: 'Cartridges',
     version,
-  });
-  let token: string;
+  })
+  let token: string
 
-  let stepText: string;
-  let step: Step;
-  let steps: Steps;
+  let stepText: string
+  let step: Step
+  let steps: Steps
 
   const finishStep = (success: boolean) => {
     if (success) {
-      step.success(`${stepText} - ${chalk.bold.green('OK')}`);
+      step.success(`${stepText} - ${chalk.bold.green('OK')}`)
     } else {
-      step.error(`${stepText} - ${chalk.bold.red('FAIL')}`);
+      step.error(`${stepText} - ${chalk.bold.red('FAIL')}`)
     }
-    return true;
-  };
+    return true
+  }
 
   const defineStep = (
     prmStepText: SFCCDeployStepText,
@@ -101,18 +101,18 @@ export default async (options: SFCCDeployOptions): Promise<void> => {
   ) => async () => {
     stepText = typeof prmStepText === 'function' ? prmStepText({
       options, dwdav, rootDir, step, stepText,
-    }) : prmStepText;
+    }) : prmStepText
     step = steps
       .advance(stepText, emoji)
-      .start();
+      .start()
 
-    const ret = await fn();
+    const ret = await fn()
 
     if (!specialFinish) {
-      finishStep(true);
+      finishStep(true)
     }
-    return ret;
-  };
+    return ret
+  }
 
   const additionalActiveSteps = additionalSteps
     ? additionalSteps
@@ -122,103 +122,103 @@ export default async (options: SFCCDeployOptions): Promise<void> => {
       }) => defineStep(name, emoji, () => fn({
         options, dwdav, token, useSfccCi, rootDir, step, stepText,
       }), specialFinish))
-    : [];
-  const stepCount = (useSfccCi ? 2 : 6) + additionalActiveSteps.length;
-  steps = new Steps(stepCount);
+    : []
+  const stepCount = (useSfccCi ? 2 : 6) + additionalActiveSteps.length
+  steps = new Steps(stepCount)
 
-  const zipFileName = 'cartridges.zip';
-  const zipFile = rootDir + zipFileName;
+  const zipFileName = 'cartridges.zip'
+  const zipFile = rootDir + zipFileName
 
   const zipCartridges = defineStep('Creating ZIP', 'hammer', async () => {
-    const output = fs.createWriteStream(zipFile);
+    const output = fs.createWriteStream(zipFile)
     const archive = archiver('zip', {
       zlib: { level: 9 },
-    });
-    archive.pipe(output);
-    archive.directory(`${rootDir}cartridges/`, useSfccCi ? version : false);
-    await archive.finalize();
+    })
+    archive.pipe(output)
+    archive.directory(`${rootDir}cartridges/`, useSfccCi ? version : false)
+    await archive.finalize()
 
-    const stats = fs.statSync(zipFile);
+    const stats = fs.statSync(zipFile)
     const sizeMb = (stats.size / 1024 / 1024).toLocaleString(undefined, {
       minimumFractionDigits: 2,
       maximumFractionDigits: 2,
-    });
-    step.success(`${stepText} - ${chalk.green(sizeMb)} MB - ${chalk.bold.green('OK')}`);
-  }, true);
+    })
+    step.success(`${stepText} - ${chalk.green(sizeMb)} MB - ${chalk.bold.green('OK')}`)
+  }, true)
 
   const checkConnection = defineStep('Check connection', 'earth_africa', async () => {
-    await (dwdav as DWDAV).get('..');
-  });
+    await (dwdav as DWDAV).get('..')
+  })
 
   const checkCodeVersionExistance = defineStep('Check for existing code version', 'mag', async () => {
-    let codeVersionExists;
+    let codeVersionExists
     try {
-      await (dwdav as DWDAV).get('.');
-      codeVersionExists = true;
+      await (dwdav as DWDAV).get('.')
+      codeVersionExists = true
     } catch {
-      codeVersionExists = false;
+      codeVersionExists = false
     }
 
     if (codeVersionExists) {
-      await (dwdav as DWDAV).delete('.');
-      step.success(`${stepText} - ${chalk.bold.green('Deleted existing version')}`);
+      await (dwdav as DWDAV).delete('.')
+      step.success(`${stepText} - ${chalk.bold.green('Deleted existing version')}`)
     } else {
-      step.success(`${stepText} - ${chalk.bold.green('Not found')}`);
+      step.success(`${stepText} - ${chalk.bold.green('Not found')}`)
     }
-  }, true);
+  }, true)
 
   const uploadZip = defineStep('Uploading ZIP', 'truck', async () => {
-    await (dwdav as DWDAV).post(`${rootDir}cartridges.zip`, rootDir);
-  });
+    await (dwdav as DWDAV).post(`${rootDir}cartridges.zip`, rootDir)
+  })
 
   const unzip = defineStep('Unzipping', 'gift', async () => {
-    await (dwdav as DWDAV).unzip(zipFileName);
-  });
+    await (dwdav as DWDAV).unzip(zipFileName)
+  })
 
   const deleteZip = defineStep('Delete remote ZIP', 'wastebasket', async () => {
-    await (dwdav as DWDAV).delete(zipFileName);
-  });
+    await (dwdav as DWDAV).delete(zipFileName)
+  })
 
   const sfccCiDeploy = defineStep('Deploy code', 'truck', async () => {
     token = await new Promise((resolve, reject) => {
       sfccCi.auth.auth(config.clientId, config.clientSecret, (err, receivedToken) => {
         if (err) {
-          reject(err);
+          reject(err)
         } else {
-          resolve(receivedToken);
+          resolve(receivedToken)
         }
-      });
-    });
+      })
+    })
     await new Promise((resolve, reject) => {
       sfccCi.code.deploy(config.hostname, zipFile, token, {
         pfx: config.p12 || undefined,
         passphrase: config.passphrase ?? undefined,
       }, (err) => {
         if (err) {
-          reject(err);
+          reject(err)
         } else {
-          resolve(undefined);
+          resolve(undefined)
         }
-      });
-    });
-  });
+      })
+    })
+  })
 
   try {
-    await zipCartridges();
+    await zipCartridges()
     if (useSfccCi) {
-      await sfccCiDeploy();
+      await sfccCiDeploy()
     } else {
-      await checkConnection();
-      await checkCodeVersionExistance();
-      await uploadZip();
-      await unzip();
-      await deleteZip();
+      await checkConnection()
+      await checkCodeVersionExistance()
+      await uploadZip()
+      await unzip()
+      await deleteZip()
     }
     additionalActiveSteps.forEach(async (additionalStep) => {
-      await additionalStep();
-    });
+      await additionalStep()
+    })
   } catch (e) {
-    finishStep(false);
-    throw (e);
+    finishStep(false)
+    throw (e)
   }
-};
+}

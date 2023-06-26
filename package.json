@@ -26,7 +26,7 @@
     "url": "https://github.com/jenssimon/sfcc-deploy"
   },
   "scripts": {
-    "lint": "eslint --fix --ext .tsx,.ts,.jsx,.js ./",
+    "lint": "eslint --fix --ext .tsx,.ts,.mts,.cts,.jsx,.js,.mjs,.cjs ./",
     "tsc": "tsc",
     "prepublishOnly": "tsc",
     "ci-test": "run-s \"ci-test:*\"",
@@ -52,7 +52,7 @@
   "devDependencies": {
     "@commitlint/cli": "17.6.6",
     "@commitlint/config-conventional": "17.6.6",
-    "@jenssimon/eslint-config-base": "6.9.0",
+    "@jenssimon/eslint-config-base": "7.0.1",
     "@jenssimon/eslint-config-typescript": "3.7.6",
     "@types/archiver": "5.3.2",
     "@types/node": "18.16.18",
