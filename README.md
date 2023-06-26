@@ -1,4 +1,4 @@
-[![NPM version][npm-image]][npm-url] [![Downloads][npm-downloads-image]][npm-url][![star this repo][gh-stars-image]][gh-url] [![fork this repo][gh-forks-image]][gh-url] [![Build Status][gh-status-image]][gh-url]
+[![NPM version][npm-image]][npm-url] [![Downloads][npm-downloads-image]][npm-url][![star this repo][gh-stars-image]][gh-url] [![fork this repo][gh-forks-image]][gh-url] [![CI][gh-status-image]][gh-status-url]
 
 # sfcc-deploy
 
@@ -94,4 +94,5 @@ MIT © 2023 [Jens Simon](https://github.com/jenssimon)
 [gh-url]: https://github.com/jenssimon/sfcc-deploy
 [gh-stars-image]: https://badgen.net/github/stars/jenssimon/sfcc-deploy
 [gh-forks-image]: https://badgen.net/github/forks/jenssimon/sfcc-deploy
-[gh-status-image]: https://badgen.net/github/status/jenssimon/sfcc-deploy
+[gh-status-image]: https://github.com/jenssimon/sfcc-deploy/actions/workflows/ci.yml/badge.svg
+[gh-status-url]: https://github.com/jenssimon/sfcc-deploy/actions/workflows/ci.yml
