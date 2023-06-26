@@ -21,7 +21,7 @@ Uploads a set of SFCC cartridges to an instance. Additionally you can extend it 
 The credentials object is the same as the config for [dwdav](https://www.npmjs.com/package/dwdav#config).
 
 ```javascript
-import sfccDeploy from 'sfcc-deploy';
+import sfccDeploy from 'sfcc-deploy'
 
 const config = {
   hostname: 'host.name.net',
@@ -29,9 +29,9 @@ const config = {
   password: 'password',
   p12: 'path/to/cert.p12', // two factor authentication
   passphrase: 'certpassphrase', // two factor authentication
-};
+}
 
-const version = '0.5.1';
+const version = '0.5.1'
 
 try {
   await sfccDeploy({
@@ -39,7 +39,7 @@ try {
     version,
 
     root: './dist/', // default: './dist/'
-  });
+  })
 } catch (e) {
   console.error('error', e)
 }
@@ -55,7 +55,7 @@ const activateCodeVersion = {
   fn: (params) => {
     // ...
   },
-};
+}
 
 try {
   await sfccDeploy({
@@ -66,9 +66,9 @@ try {
     additionalSteps: [
       activateCodeVersion,
     ],
-  });
+  })
 } catch (e)  {
-  console.error('error', e);
+  console.error('error', e)
 }
 ```
 
