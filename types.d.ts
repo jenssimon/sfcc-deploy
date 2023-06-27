@@ -2,11 +2,11 @@
 declare module 'sfcc-ci' {
   export declare const code: {
     deploy: (hostname: string, zipFile, token: string, options: unknown,
-      callback: (err: Error, receivedToken: string) => void) => void;
+      callback: (err: Error, receivedToken: string) => void) => void
   }
 
   export declare const auth: {
-    auth: (clientId: string, clientSecret: string, callback: (err: Error, receivedToken: string) => void) => void;
+    auth: (clientId: string, clientSecret: string, callback: (err: Error, receivedToken: string) => void) => void
   }
 }
 
