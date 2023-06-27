@@ -8,11 +8,11 @@ import sfccDeploy from '../index'
 import type { SFCCDeployCredentials, DWDAVDeployCredential } from '../index'
 
 interface OptionDefinition {
-  name: string;
-  env: string;
-  description: string;
-  required?: boolean;
-  value?: string;
+  name: string
+  env: string
+  description: string
+  required?: boolean
+  value?: string
 }
 
 const program = new Command()

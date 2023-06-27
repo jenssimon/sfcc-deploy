@@ -10,58 +10,58 @@ import sfccCi from 'sfcc-ci'
 import type { Step } from 'cli-step'
 
 interface SFCCDeployCredential {
-  hostname: string;
+  hostname: string
 }
 
 export interface SFCCCIDeployCredential extends SFCCDeployCredential {
-  clientId: string;
-  clientSecret: string;
-  p12: string;
-  passphrase: string;
+  clientId: string
+  clientSecret: string
+  p12: string
+  passphrase: string
 }
 
 export interface DWDAVDeployCredential extends SFCCCIDeployCredential {
-  username: string;
-  password: string;
+  username: string
+  password: string
 }
 
 export type SFCCDeployCredentials = SFCCCIDeployCredential | DWDAVDeployCredential;
 
 export interface SFCCDeployStepTextOptions {
-  options: SFCCDeployOptions;
-  dwdav?: DWDAV;
-  rootDir: string;
-  step: Step;
-  stepText: string;
+  options: SFCCDeployOptions
+  dwdav?: DWDAV
+  rootDir: string
+  step: Step
+  stepText: string
 }
 
 export type SFCCDeployStepText = string | ((opts: SFCCDeployStepTextOptions) => string);
 
 export interface SFCCDeployAdditionalStep {
-  condition: string;
-  name: SFCCDeployStepText;
-  emoji: string;
-  fn: (opts: SFCCDeployAdditionalStepOptions) => Promise<void>;
-  specialFinish?: boolean;
+  condition: string
+  name: SFCCDeployStepText
+  emoji: string
+  fn: (opts: SFCCDeployAdditionalStepOptions) => Promise<void>
+  specialFinish?: boolean
 }
 
 export interface SFCCDeployAdditionalStepOptions {
-  options: SFCCDeployOptions;
-  dwdav?: DWDAV;
-  token: string;
-  useSfccCi: boolean;
-  rootDir: string;
-  step: Step;
-  stepText: string;
+  options: SFCCDeployOptions
+  dwdav?: DWDAV
+  token: string
+  useSfccCi: boolean
+  rootDir: string
+  step: Step
+  stepText: string
 
 }
 
 export interface SFCCDeployOptions {
-  [key: string]: undefined | boolean | string | SFCCDeployCredentials | SFCCDeployAdditionalStep[];
-  credentials: SFCCDeployCredentials;
-  version: string;
-  root?: string;
-  additionalSteps?: SFCCDeployAdditionalStep[];
+  [key: string]: undefined | boolean | string | SFCCDeployCredentials | SFCCDeployAdditionalStep[]
+  credentials: SFCCDeployCredentials
+  version: string
+  root?: string
+  additionalSteps?: SFCCDeployAdditionalStep[]
 }
 
 export default async (options: SFCCDeployOptions): Promise<void> => {
