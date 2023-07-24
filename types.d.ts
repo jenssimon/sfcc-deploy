@@ -12,32 +12,32 @@ declare module 'sfcc-ci' {
 
 declare module 'dwdav' {
   class DWDAV {
-    constructor(options: unknown);
+    public constructor(options: unknown);
 
-    get(url: string): Promise<string>;
+    public get(url: string): Promise<string>;
 
-    post(url: string, rootDir: string): Promise<string>;
+    public post(url: string, rootDir: string): Promise<string>;
 
-    delete(url: string): Promise<string>;
+    public delete(url: string): Promise<string>;
 
-    unzip(url: string): Promise<string>;
+    public unzip(url: string): Promise<string>;
   }
   export default DWDAV
 }
 
 declare module 'cli-step' {
   export class Step {
-    start(): Step;
+    public start(): Step;
 
-    success(msg: string): void;
+    public success(msg: string): void;
 
-    error(msg: string): void;
+    public error(msg: string): void;
   }
 
   class Steps {
-    constructor(num: number);
+    public constructor(num: number);
 
-    advance(stepText: string, emoji?: string): Step;
+    public advance(stepText: string, emoji?: string): Step;
   }
   export default Steps
 }
