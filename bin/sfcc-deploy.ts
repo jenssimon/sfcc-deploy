@@ -3,9 +3,9 @@
 import { Command } from 'commander'
 import { camelCase } from 'camel-case'
 
-import sfccDeploy from '../index'
+import sfccDeploy from '../index.js'
 
-import type { SFCCDeployCredentials, DWDAVDeployCredential } from '../index'
+import type { SFCCDeployCredentials, DWDAVDeployCredential } from '../index.js'
 
 interface OptionDefinition {
   name: string
