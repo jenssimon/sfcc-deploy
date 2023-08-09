@@ -442,9 +442,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jenssimon/eslint-config-base@npm:7.1.4":
-  version: 7.1.4
-  resolution: "@jenssimon/eslint-config-base@npm:7.1.4"
+"@jenssimon/eslint-config-base@npm:7.1.6":
+  version: 7.1.6
+  resolution: "@jenssimon/eslint-config-base@npm:7.1.6"
   dependencies:
     eslint-config-airbnb: ^19.0.4
     eslint-config-airbnb-base: ^15.0.0
@@ -466,7 +466,7 @@ __metadata:
     eslint-plugin-wc: ^1.5.0
   peerDependencies:
     eslint: ^7.32.0 || ^8.2.0
-  checksum: b5cffacac6c66a966bbb31363741f81888340da9e799bb655558cbd3ff75716c7df76e3f895e8fd27e580d65e6b139f8598cab050b08022badbc3476998615ca
+  checksum: 78f2b9f73b2deacfd23ac00e712b6ca33e876ed2c74eec508e1a90dfaccf6215fbce4205600972430c271994024c555a7c4ba81e2a241cc203107b73e5869992
   languageName: node
   linkType: hard
 
@@ -1114,10 +1114,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:18.17.3":
-  version: 18.17.3
-  resolution: "@types/node@npm:18.17.3"
-  checksum: 884fb68936b2b0ff90863fcf80610dd2f3d9fe1947897248b0138df05fe41ee6ce62941b37b565e3b3fd77601cd3977a64de858654c6ab9064413b171740d6ba
+"@types/node@npm:18.17.4":
+  version: 18.17.4
+  resolution: "@types/node@npm:18.17.4"
+  checksum: d4c458202d82c999f38d85ca9ae8a2d3e521645c7f1b908cd6a0303d0e13c7d5eb3f888c41f584ba029ecf802d0a0005b7816c149400371a3c035abc4bd9a4c5
   languageName: node
   linkType: hard
 
@@ -8512,10 +8512,10 @@ __metadata:
   dependencies:
     "@commitlint/cli": 17.6.7
     "@commitlint/config-conventional": 17.6.7
-    "@jenssimon/eslint-config-base": 7.1.4
+    "@jenssimon/eslint-config-base": 7.1.6
     "@jenssimon/eslint-config-typescript": 5.1.2
     "@types/archiver": 5.3.2
-    "@types/node": 18.17.3
+    "@types/node": 18.17.4
     archiver: ^5.3.1
     camel-case: ^4.1.2
     chalk: ^4.1.2
