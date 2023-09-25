@@ -52,10 +52,10 @@
   "devDependencies": {
     "@commitlint/cli": "17.7.1",
     "@commitlint/config-conventional": "17.7.0",
-    "@jenssimon/eslint-config-base": "7.2.4",
-    "@jenssimon/eslint-config-typescript": "5.1.9",
+    "@jenssimon/eslint-config-base": "7.2.5",
+    "@jenssimon/eslint-config-typescript": "5.1.10",
     "@types/archiver": "5.3.3",
-    "@types/node": "18.17.19",
+    "@types/node": "18.18.0",
     "commitizen": "4.3.0",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "8.50.0",
