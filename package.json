@@ -36,11 +36,11 @@
     "semantic-release": "semantic-release"
   },
   "dependencies": {
-    "archiver": "^5.3.1",
+    "archiver": "^5.3.2",
     "camel-case": "^4.1.2",
     "chalk": "^4.1.2",
     "cli-step": "^1.0.2",
-    "commander": "^10.0.0",
+    "commander": "^10.0.1",
     "dwdav": ">=3.5.1"
   },
   "peerDependencies": {
@@ -78,7 +78,7 @@
       "sonarjs/cognitive-complexity": "off"
     }
   },
-  "packageManager": "yarn@3.6.4",
+  "packageManager": "yarn@4.0.0",
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
