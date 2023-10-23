@@ -38,7 +38,7 @@
   "dependencies": {
     "archiver": "^5.3.2",
     "camel-case": "^4.1.2",
-    "chalk": "^4.1.2",
+    "chalk": "^5.0.0",
     "cli-step": "^1.0.2",
     "commander": "^10.0.1",
     "dwdav": ">=3.5.1"
