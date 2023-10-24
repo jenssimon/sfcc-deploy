@@ -75,6 +75,7 @@
       "@jenssimon/typescript"
     ],
     "rules": {
+      "@typescript-eslint/naming-convention": "off",
       "sonarjs/cognitive-complexity": "off"
     }
   },
