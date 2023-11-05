@@ -49,7 +49,7 @@
   "devDependencies": {
     "@commitlint/cli": "18.2.0",
     "@commitlint/config-conventional": "18.1.0",
-    "@jenssimon/eslint-config-base": "7.3.9",
+    "@jenssimon/eslint-config-base": "7.3.10",
     "@jenssimon/eslint-config-typescript": "5.2.4",
     "@types/archiver": "5.3.4",
     "@types/node": "20.8.10",
