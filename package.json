@@ -47,12 +47,12 @@
     "sfcc-ci": ">=2.4.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "18.4.2",
-    "@commitlint/config-conventional": "18.4.2",
+    "@commitlint/cli": "18.4.3",
+    "@commitlint/config-conventional": "18.4.3",
     "@jenssimon/eslint-config-base": "7.3.10",
     "@jenssimon/eslint-config-typescript": "5.2.7",
     "@types/archiver": "5.3.4",
-    "@types/node": "20.9.2",
+    "@types/node": "20.9.3",
     "commitizen": "4.3.0",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "8.54.0",
