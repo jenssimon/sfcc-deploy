@@ -517,9 +517,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jenssimon/eslint-config-typescript@npm:5.2.9":
-  version: 5.2.9
-  resolution: "@jenssimon/eslint-config-typescript@npm:5.2.9"
+"@jenssimon/eslint-config-typescript@npm:5.2.10":
+  version: 5.2.10
+  resolution: "@jenssimon/eslint-config-typescript@npm:5.2.10"
   dependencies:
     "@typescript-eslint/eslint-plugin": "npm:^6.8.0"
     "@typescript-eslint/parser": "npm:^6.8.0"
@@ -527,7 +527,7 @@ __metadata:
   peerDependencies:
     eslint: ^7.0.0 || ^8.0.0
     typescript: ">=4.0.0"
-  checksum: e5c08c3afc77b85c31c2221862205e53a05fafd2b25e69ac19593021da5acc97a8c944af65fdec3fc59474cc8ab6a14e85d476f575351eb0b9e14970873d2f6a
+  checksum: 100f03a541cb8ab89fda24b5b063cd8d89bf685e6d5868a663b5f16275f645a8f3ec9932cdc1bb5c2ce64de9eed0ac88b9ce7ade543767da25782632deaf8aab
   languageName: node
   linkType: hard
 
@@ -9218,7 +9218,7 @@ __metadata:
     "@commitlint/cli": "npm:18.4.3"
     "@commitlint/config-conventional": "npm:18.4.3"
     "@jenssimon/eslint-config-base": "npm:7.3.10"
-    "@jenssimon/eslint-config-typescript": "npm:5.2.9"
+    "@jenssimon/eslint-config-typescript": "npm:5.2.10"
     "@types/archiver": "npm:5.3.4"
     "@types/node": "npm:20.10.3"
     archiver: "npm:^5.3.2"
