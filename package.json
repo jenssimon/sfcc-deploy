@@ -62,7 +62,7 @@
     "pinst": "3.0.0",
     "semantic-release": "22.0.10",
     "sfcc-ci": "2.11.0",
-    "ts-node": "10.9.1",
+    "ts-node": "10.9.2",
     "typescript": "5.3.3"
   },
   "eslintConfig": {
