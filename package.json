@@ -50,7 +50,7 @@
     "@commitlint/cli": "18.4.3",
     "@commitlint/config-conventional": "18.4.3",
     "@jenssimon/eslint-config-base": "7.3.14",
-    "@jenssimon/eslint-config-typescript": "5.2.12",
+    "@jenssimon/eslint-config-typescript": "5.2.13",
     "@types/archiver": "5.3.4",
     "@types/node": "20.10.5",
     "commitizen": "4.3.0",
