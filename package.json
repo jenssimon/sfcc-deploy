@@ -30,7 +30,7 @@
     "tsc": "tsc",
     "prepublishOnly": "tsc",
     "commit": "cz",
-    "postinstall": "husky install",
+    "postinstall": "husky",
     "prepack": "pinst --disable",
     "postpack": "pinst --enable",
     "semantic-release": "semantic-release"
