@@ -47,7 +47,7 @@ program
     // add values for options - check env variables
     const optionsWithValues = options.map((option) => ({
       ...option,
-      value: (opts[camelCase(option.name)] || process.env[option.env]) as string | undefined,
+      value: (opts[camelCase(option.name)] ?? process.env[option.env]) as string | undefined,
     }))
 
     // check for missing options
