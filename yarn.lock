@@ -374,9 +374,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jenssimon/eslint-config-typescript@npm:5.2.18":
-  version: 5.2.18
-  resolution: "@jenssimon/eslint-config-typescript@npm:5.2.18"
+"@jenssimon/eslint-config-typescript@npm:5.2.19":
+  version: 5.2.19
+  resolution: "@jenssimon/eslint-config-typescript@npm:5.2.19"
   dependencies:
     "@typescript-eslint/eslint-plugin": "npm:^6.8.0"
     "@typescript-eslint/parser": "npm:^6.8.0"
@@ -384,7 +384,7 @@ __metadata:
   peerDependencies:
     eslint: ^7.0.0 || ^8.0.0
     typescript: ">=4.0.0"
-  checksum: a080564c23549f52b8846d4bf4b1fb5b95ebb13b77025b4babc58155349695196b865eadc085d62556213ce8011c869d23ce508112119e92f5f104f75a5ffe0c
+  checksum: 0dac16ea518ee3b77c674d28a30a0ec710368102679049156b0a3e4a50f8ad5fdaa78be060910a728fabb9da893ff93807eaf86b0ceb1ab0c806bf86a5528658
   languageName: node
   linkType: hard
 
@@ -4527,12 +4527,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"husky@npm:9.0.6":
-  version: 9.0.6
-  resolution: "husky@npm:9.0.6"
+"husky@npm:9.0.7":
+  version: 9.0.7
+  resolution: "husky@npm:9.0.7"
   bin:
     husky: bin.js
-  checksum: 1ef034899dcdc35e5bf5436e1e02f8a7177dbb8a10dd91b77456d7fe110c204d8d4a7d53180e0651b87e35f39d7e0e95a53b4b7c334f68aefbc0d93bce4b54f8
+  checksum: ac36838bc230b42ca878eeb6993cba5499b858700581fa9e8b579227af9ad47bdbf4c050f4145f51f33f77c16d359f329622b7050150c78a7c52be26cc24174e
   languageName: node
   linkType: hard
 
@@ -8168,7 +8168,7 @@ __metadata:
     "@commitlint/cli": "npm:18.6.0"
     "@commitlint/config-conventional": "npm:18.6.0"
     "@jenssimon/eslint-config-base": "npm:7.3.17"
-    "@jenssimon/eslint-config-typescript": "npm:5.2.18"
+    "@jenssimon/eslint-config-typescript": "npm:5.2.19"
     "@types/archiver": "npm:5.3.4"
     "@types/node": "npm:20.11.10"
     archiver: "npm:^5.3.2"
@@ -8180,7 +8180,7 @@ __metadata:
     cz-conventional-changelog: "npm:3.3.0"
     dwdav: "npm:>=3.5.1"
     eslint: "npm:8.56.0"
-    husky: "npm:9.0.6"
+    husky: "npm:9.0.7"
     lint-staged: "npm:15.2.0"
     npm-run-all2: "npm:6.1.1"
     pinst: "npm:3.0.0"
