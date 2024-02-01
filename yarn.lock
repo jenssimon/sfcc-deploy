@@ -1106,12 +1106,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:20.11.14":
-  version: 20.11.14
-  resolution: "@types/node@npm:20.11.14"
+"@types/node@npm:20.11.16":
+  version: 20.11.16
+  resolution: "@types/node@npm:20.11.16"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 10c0/81a55ddf68811439e58bdc2e4b8e501c6c6ea3d5351aa6362a36f5829055f58195bc201b0992ffda306fcd848c84b1eca327befb71f12f24e0d356e997e17add
+  checksum: 10c0/4886b90278e9c877a84efd3edd4667cd990e032d77268d2a798b99ebc1901ea336fa7dfbe9eaf4ad6ad1da9ce2ec31baf300038a3905838692362eb19904ebde
   languageName: node
   linkType: hard
 
@@ -4527,12 +4527,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"husky@npm:9.0.7":
-  version: 9.0.7
-  resolution: "husky@npm:9.0.7"
+"husky@npm:9.0.10":
+  version: 9.0.10
+  resolution: "husky@npm:9.0.10"
   bin:
-    husky: bin.js
-  checksum: 10c0/ac36838bc230b42ca878eeb6993cba5499b858700581fa9e8b579227af9ad47bdbf4c050f4145f51f33f77c16d359f329622b7050150c78a7c52be26cc24174e
+    husky: bin.mjs
+  checksum: 10c0/585d95fec151d2e3fba1a8d97c1290dee40b83eb2b8850afae0805e183b3b3ec45bfeef97b2d0c4ae16f1c1bf19788b9129627d9ba02d924c874632207e33b93
   languageName: node
   linkType: hard
 
@@ -8138,7 +8138,7 @@ __metadata:
     "@jenssimon/eslint-config-base": "npm:7.3.17"
     "@jenssimon/eslint-config-typescript": "npm:5.2.19"
     "@types/archiver": "npm:5.3.4"
-    "@types/node": "npm:20.11.14"
+    "@types/node": "npm:20.11.16"
     archiver: "npm:^5.3.2"
     camel-case: "npm:^4.1.2"
     chalk: "npm:^4.1.2"
@@ -8148,7 +8148,7 @@ __metadata:
     cz-conventional-changelog: "npm:3.3.0"
     dwdav: "npm:>=3.5.1"
     eslint: "npm:8.56.0"
-    husky: "npm:9.0.7"
+    husky: "npm:9.0.10"
     lint-staged: "npm:15.2.1"
     npm-run-all2: "npm:6.1.2"
     pinst: "npm:3.0.0"
