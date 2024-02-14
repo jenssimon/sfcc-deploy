@@ -406,9 +406,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jenssimon/eslint-config-base@npm:7.3.21":
-  version: 7.3.21
-  resolution: "@jenssimon/eslint-config-base@npm:7.3.21"
+"@jenssimon/eslint-config-base@npm:7.3.22":
+  version: 7.3.22
+  resolution: "@jenssimon/eslint-config-base@npm:7.3.22"
   dependencies:
     eslint-config-airbnb: "npm:^19.0.4"
     eslint-config-airbnb-base: "npm:^15.0.0"
@@ -430,7 +430,7 @@ __metadata:
     eslint-plugin-wc: "npm:^2.0.4"
   peerDependencies:
     eslint: ^7.32.0 || ^8.2.0
-  checksum: 10c0/b7226288336a45e0679110fb36a234b9903c75333cdf4454e4bc336685394c0c1635930f0c2b0bb3b224c18f3fe20fa0d014dd9771ccc2edcb215a8373c17596
+  checksum: 10c0/1f44bcad81b63ee075ade48876f47feedda2c71e356f7ed20c38346ac6a4efe81bae39ef8d14385a582ba77f0c8d9483d459820a7c8235140bd52a1ed09bcdc6
   languageName: node
   linkType: hard
 
@@ -4662,12 +4662,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"husky@npm:9.0.10":
-  version: 9.0.10
-  resolution: "husky@npm:9.0.10"
+"husky@npm:9.0.11":
+  version: 9.0.11
+  resolution: "husky@npm:9.0.11"
   bin:
     husky: bin.mjs
-  checksum: 10c0/585d95fec151d2e3fba1a8d97c1290dee40b83eb2b8850afae0805e183b3b3ec45bfeef97b2d0c4ae16f1c1bf19788b9129627d9ba02d924c874632207e33b93
+  checksum: 10c0/2c787dcf74a837fc9a4fea7da907509d4bd9a289f4ea10ecc9d86279e4d4542b0f5f6443a619bccae19e265f2677172cc2b86aae5c932a35a330cc227d914605
   languageName: node
   linkType: hard
 
@@ -8290,7 +8290,7 @@ __metadata:
   dependencies:
     "@commitlint/cli": "npm:18.6.1"
     "@commitlint/config-conventional": "npm:18.6.1"
-    "@jenssimon/eslint-config-base": "npm:7.3.21"
+    "@jenssimon/eslint-config-base": "npm:7.3.22"
     "@jenssimon/eslint-config-typescript": "npm:5.2.21"
     "@types/archiver": "npm:5.3.4"
     "@types/node": "npm:20.11.17"
@@ -8303,7 +8303,7 @@ __metadata:
     cz-conventional-changelog: "npm:3.3.0"
     dwdav: "npm:>=3.5.1"
     eslint: "npm:8.56.0"
-    husky: "npm:9.0.10"
+    husky: "npm:9.0.11"
     lint-staged: "npm:15.2.2"
     npm-run-all2: "npm:6.1.2"
     pinst: "npm:3.0.0"
