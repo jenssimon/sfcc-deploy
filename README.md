@@ -4,6 +4,12 @@
 
 > Deploy cartridges to a Salesforce Commerce Cloud (SFCC) instance.
 
+> **Warning**
+>
+> **DEPRECATED**
+>
+> The recommended way to deploy code to SFCC instances is direct via [sfcc-ci](https://github.com/SalesforceCommerceCloud/sfcc-ci?tab=readme-ov-file#pushing-code).
+
 ![Screenshot](https://github.com/jenssimon/sfcc-deploy/raw/main/deploy.gif)
 
 ## Installation
